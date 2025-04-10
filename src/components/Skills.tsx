@@ -1,13 +1,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
-import { Code, Palette, Zap, Database } from "lucide-react";
+import { Code, Palette, Zap, Database, FileCode, BarChart3, Java } from "lucide-react";
 
 const skills = [
   { name: "HTML & CSS", percentage: 90 },
-  { name: "JavaScript", percentage: 85 },
-  { name: "React", percentage: 80 },
-  { name: "Node.js", percentage: 75 },
-  { name: "UI/UX Design", percentage: 70 },
+  { name: "JavaScript", percentage: 80 },
+  { name: "PHP", percentage: 75 },
+  { name: "Java", percentage: 85 },
+  { name: "R", percentage: 85 },
   { name: "TypeScript", percentage: 65 },
 ];
 
@@ -23,14 +23,14 @@ const services = [
     description: "Designing beautiful, user-friendly interfaces that engage users"
   },
   {
-    icon: <Zap className="w-10 h-10 text-purple" />,
-    title: "Performance Optimization",
-    description: "Improving website speed and performance for better user experience"
+    icon: <Java className="w-10 h-10 text-purple" />,
+    title: "Java Development",
+    description: "Building robust Java applications and services"
   },
   {
-    icon: <Database className="w-10 h-10 text-purple" />,
-    title: "Backend Development",
-    description: "Building robust server-side applications and APIs"
+    icon: <BarChart3 className="w-10 h-10 text-purple" />,
+    title: "Data Analysis with R",
+    description: "Analyzing and visualizing complex data sets using R"
   }
 ];
 
