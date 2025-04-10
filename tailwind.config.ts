@@ -92,7 +92,9 @@ export default {
 					to: { width: '100%' }
 				},
 				blink: {
-					'50%': { borderColor: 'transparent' }
+					'0%': { opacity: '1' },
+					'50%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				}
 			},
 			animation: {
@@ -100,7 +102,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in': 'slide-in 0.6s ease-out',
-				typing: 'typing 3.5s steps(40, end), blink .75s step-end infinite'
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink': 'blink 0.75s step-end infinite'
 			}
 		}
 	},
