@@ -25,11 +25,8 @@ const About = () => {
 
           <div className="w-full md:w-1/2 lg:w-3/5">
             <h2 className="section-title">About Me</h2>
-            <p className="text-white/70 mb-4">
+            <p className="text-white/70 mb-6">
               I'm a passionate web developer with a keen eye for design and a commitment to creating beautiful, functional websites. With 1 year of experience in the industry, I specialize in building responsive, user-friendly interfaces that drive results.
-            </p>
-            <p className="text-white/70 mb-4">
-              Standing at 1m90 with braids and an athletic build, I bring both technical skills and a strong presence to any project I work on.
             </p>
             <p className="text-white/70 mb-8">
               My journey in web development began with a curiosity about how websites work, and it has evolved into a career that I truly love. I approach each project with enthusiasm and dedication, striving to exceed expectations and deliver solutions that make an impact.
