@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Basketball, Dumbbell, ShoppingBag } from "lucide-react";
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
                 />
               </div>
               <div className="absolute -right-10 -bottom-10 glass-card p-4 z-20">
-                <p className="text-purple font-bold text-lg md:text-xl">100+</p>
+                <p className="text-purple font-bold text-lg md:text-xl">7+</p>
                 <p className="text-sm text-white/70">Projects Completed</p>
               </div>
             </div>
@@ -32,13 +33,37 @@ const About = () => {
               My journey in web development began with a curiosity about how websites work, and it has evolved into a career that I truly love. I approach each project with enthusiasm and dedication, striving to exceed expectations and deliver solutions that make an impact.
             </p>
 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="glass-card p-4 flex flex-col items-center">
+                <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
+                  <Basketball className="w-6 h-6 text-purple" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">Basketball</h3>
+                <p className="text-sm text-white/70 text-center">Passionate player</p>
+              </div>
+              <div className="glass-card p-4 flex flex-col items-center">
+                <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
+                  <Dumbbell className="w-6 h-6 text-purple" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">Fitness</h3>
+                <p className="text-sm text-white/70 text-center">Weightlifting enthusiast</p>
+              </div>
+              <div className="glass-card p-4 flex flex-col items-center">
+                <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
+                  <ShoppingBag className="w-6 h-6 text-purple" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">Reselling</h3>
+                <p className="text-sm text-white/70 text-center">Clothes & shoes</p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">1+</h3>
                 <p className="text-sm text-white/70">Years Experience</p>
               </div>
               <div className="glass-card p-4 text-center">
-                <h3 className="text-purple text-3xl font-bold mb-1">100+</h3>
+                <h3 className="text-purple text-3xl font-bold mb-1">7+</h3>
                 <p className="text-sm text-white/70">Projects Completed</p>
               </div>
               <div className="glass-card p-4 text-center">

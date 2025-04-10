@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 
@@ -61,6 +60,16 @@ const projects = [
     description: "Complete branding package for a technology startup",
     tags: ["Photoshop", "Illustrator"],
     github: null,
+    demo: "#"
+  },
+  {
+    id: 7,
+    title: "Fitness Tracker",
+    category: "app",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1470",
+    description: "Track your fitness progress with this customizable app",
+    tags: ["React Native", "Firebase", "Health API"],
+    github: "#",
     demo: "#"
   }
 ];
