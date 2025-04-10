@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
-import { Code, Palette, Zap, Database, FileCode, BarChart3, Java } from "lucide-react";
+import { Code, Palette, FileCode, BarChart3, Coffee } from "lucide-react";
 
 const skills = [
   { name: "HTML & CSS", percentage: 90 },
@@ -23,7 +23,7 @@ const services = [
     description: "Designing beautiful, user-friendly interfaces that engage users"
   },
   {
-    icon: <Java className="w-10 h-10 text-purple" />,
+    icon: <Coffee className="w-10 h-10 text-purple" />,
     title: "Java Development",
     description: "Building robust Java applications and services"
   },
