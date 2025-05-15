@@ -1,75 +1,55 @@
 
 import React, { useState } from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, FileText, Database, Server, Code, Cpu } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "Plateforme E-Commerce",
+    title: "Refonte Site Web d'Entreprise",
     category: "web",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1415",
-    description: "Une plateforme e-commerce entièrement responsive avec intégration de paiement",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    description: "Refonte complète du site web d'une entreprise pour des élèves de 3ème",
+    tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     github: "#",
     demo: "#"
   },
   {
     id: 2,
-    title: "Site Portfolio",
-    category: "web",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1472",
-    description: "Site portfolio moderne avec animations et design responsive",
-    tags: ["HTML", "CSS", "JavaScript"],
+    title: "Administration Base de Données Bowling",
+    category: "database",
+    image: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?auto=format&fit=crop&q=80&w=1496",
+    description: "Création et administration d'une base de données pour une entreprise de bowling",
+    tags: ["SQL", "PostgreSQL", "Administration BD", "Gestion de données"],
     github: "#",
     demo: "#"
   },
   {
     id: 3,
-    title: "Application de Gestion de Tâches",
+    title: "Algorithme Analyse de Textes",
     category: "app",
-    image: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?auto=format&fit=crop&q=80&w=1496",
-    description: "Une application de gestion de tâches riche en fonctionnalités avec authentification",
-    tags: ["React", "Firebase", "Tailwind CSS"],
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1472",
+    description: "Algorithme en Java permettant d'identifier le sujet principal d'un article aléatoire",
+    tags: ["Java", "Algorithme", "NLP", "Analyse de texte"],
     github: "#",
     demo: "#"
   },
   {
     id: 4,
-    title: "Site de Restaurant",
-    category: "design",
+    title: "Configuration Poste de Développement",
+    category: "system",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1470",
-    description: "Site élégant pour un restaurant avec système de réservation en ligne",
-    tags: ["Figma", "Adobe XD"],
+    description: "Installation complète d'un poste de développement sous Debian 12",
+    tags: ["Debian", "Linux", "Configuration", "Développement"],
     github: "#",
     demo: "#"
   },
   {
     id: 5,
-    title: "Application Météo",
-    category: "app",
+    title: "Installation VM & Services Web",
+    category: "system",
     image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1470",
-    description: "Application météo en temps réel avec prévisions basées sur la localisation",
-    tags: ["JavaScript", "APIs", "CSS"],
-    github: "#",
-    demo: "#"
-  },
-  {
-    id: 6,
-    title: "Identité Visuelle d'Entreprise",
-    category: "design",
-    image: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?auto=format&fit=crop&q=80&w=1471",
-    description: "Pack complet d'identité visuelle pour une startup technologique",
-    tags: ["Photoshop", "Illustrator"],
-    github: null,
-    demo: "#"
-  },
-  {
-    id: 7,
-    title: "Suivi de Fitness",
-    category: "app",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1470",
-    description: "Suivez vos progrès fitness avec cette application personnalisable",
-    tags: ["React Native", "Firebase", "Health API"],
+    description: "Installation d'une machine virtuelle avec Apache, PostgreSQL et création d'un guide d'installation en anglais",
+    tags: ["VM", "Apache", "PostgreSQL", "Documentation"],
     github: "#",
     demo: "#"
   }
@@ -115,10 +95,16 @@ const Projects = () => {
               App
             </button>
             <button 
-              className={`px-5 py-2 rounded-full transition-colors ${filter === 'design' ? 'bg-purple text-white' : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
-              onClick={() => setFilter('design')}
+              className={`px-5 py-2 rounded-full transition-colors ${filter === 'database' ? 'bg-purple text-white' : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
+              onClick={() => setFilter('database')}
             >
-              Design
+              Base de données
+            </button>
+            <button 
+              className={`px-5 py-2 rounded-full transition-colors ${filter === 'system' ? 'bg-purple text-white' : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
+              onClick={() => setFilter('system')}
+            >
+              Système
             </button>
           </div>
         </div>
@@ -141,7 +127,9 @@ const Projects = () => {
                         </a>
                       )}
                       <a href={project.demo} className="w-10 h-10 rounded-full bg-dark/50 text-white flex items-center justify-center backdrop-blur-sm hover:bg-purple transition-colors">
-                        <ExternalLink size={18} />
+                        {project.category === 'database' ? <Database size={18} /> : 
+                         project.category === 'system' ? <Server size={18} /> : 
+                         project.category === 'app' ? <Code size={18} /> : <ExternalLink size={18} />}
                       </a>
                     </div>
                   </div>
