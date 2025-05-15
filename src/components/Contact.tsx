@@ -27,8 +27,8 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        title: "Message envoyé !",
+        description: "Merci de m'avoir contacté. Je vous répondrai très bientôt.",
       });
       
       setFormData({
@@ -48,18 +48,18 @@ const Contact = () => {
       
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Me Contacter</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Have a project in mind or want to say hello? Feel free to reach out. I'd love to hear from you!
+            Vous avez un projet en tête ou vous voulez simplement dire bonjour ? N'hésitez pas à me contacter. Je serais ravi d'échanger avec vous !
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
             <div className="glass-card p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">Informations de Contact</h3>
               <p className="text-white/70 mb-8">
-                Fill up the form and I'll get back to you as soon as possible.
+                Remplissez le formulaire et je vous répondrai dès que possible.
               </p>
               
               <div className="space-y-6">
@@ -68,8 +68,8 @@ const Contact = () => {
                     <Phone className="text-purple w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Phone</h4>
-                    <p className="text-white/70">+1 (555) 123-4567</p>
+                    <h4 className="font-medium mb-1">Téléphone</h4>
+                    <p className="text-white/70">+33 (0)6 12 34 56 78</p>
                   </div>
                 </div>
                 
@@ -79,7 +79,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
-                    <p className="text-white/70">contact@example.com</p>
+                    <p className="text-white/70">contact@exemple.com</p>
                   </div>
                 </div>
                 
@@ -88,8 +88,8 @@ const Contact = () => {
                     <MapPin className="text-purple w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Location</h4>
-                    <p className="text-white/70">New York, NY, USA</p>
+                    <h4 className="font-medium mb-1">Localisation</h4>
+                    <p className="text-white/70">Paris, France</p>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">Nom</label>
                     <input
                       type="text"
                       id="name"
@@ -110,7 +110,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white"
-                      placeholder="Your name"
+                      placeholder="Votre nom"
                     />
                   </div>
                   
@@ -124,13 +124,13 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white"
-                      placeholder="your.email@example.com"
+                      placeholder="votre.email@exemple.com"
                     />
                   </div>
                 </div>
                 
                 <div className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Sujet</label>
                   <input
                     type="text"
                     id="subject"
@@ -139,7 +139,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white"
-                    placeholder="How can I help you?"
+                    placeholder="Comment puis-je vous aider ?"
                   />
                 </div>
                 
@@ -153,7 +153,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white resize-none"
-                    placeholder="Your message here..."
+                    placeholder="Votre message ici..."
                   ></textarea>
                 </div>
                 
@@ -162,7 +162,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className="btn w-full flex justify-center items-center gap-2"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
                   <Send className="w-4 h-4" />
                 </button>
               </form>

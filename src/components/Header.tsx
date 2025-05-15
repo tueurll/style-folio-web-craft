@@ -44,13 +44,13 @@ const Header = () => {
           isScrolled ? "shadow-md lg:shadow-none" : ""
         )}>
           <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
-            <li><a href="#home" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Home</a></li>
-            <li><a href="#about" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>About</a></li>
-            <li><a href="#skills" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Skills</a></li>
-            <li><a href="#projects" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Projects</a></li>
+            <li><a href="#home" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Accueil</a></li>
+            <li><a href="#about" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>À propos</a></li>
+            <li><a href="#skills" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Compétences</a></li>
+            <li><a href="#projects" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Projets</a></li>
             <li><a href="#contact" className="text-white/80 hover:text-purple transition-colors duration-300" onClick={toggleMenu}>Contact</a></li>
           </ul>
-          <a href="#contact" className="mt-6 lg:mt-0 lg:ml-8 btn">Get In Touch</a>
+          <a href="#contact" className="mt-6 lg:mt-0 lg:ml-8 btn">Me contacter</a>
         </nav>
       </div>
     </header>

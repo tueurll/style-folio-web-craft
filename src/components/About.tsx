@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Dribbble, Dumbbell, ShoppingBag } from "lucide-react";
 
@@ -12,24 +13,24 @@ const About = () => {
               <div className="glass-card p-3 relative z-10">
                 <img 
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=1374" 
-                  alt="About Me" 
+                  alt="À propos de moi" 
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
               <div className="absolute -right-10 -bottom-10 glass-card p-4 z-20">
                 <p className="text-purple font-bold text-lg md:text-xl">7+</p>
-                <p className="text-sm text-white/70">Projects Completed</p>
+                <p className="text-sm text-white/70">Projets réalisés</p>
               </div>
             </div>
           </div>
 
           <div className="w-full md:w-1/2 lg:w-3/5">
-            <h2 className="section-title">About Me</h2>
+            <h2 className="section-title">À propos de moi</h2>
             <p className="text-white/70 mb-6">
-              I'm a passionate web developer with a keen eye for design and a commitment to creating beautiful, functional websites. With 1 year of experience in the industry, I specialize in building responsive, user-friendly interfaces that drive results.
+              Je suis un développeur web passionné avec un sens aigu du design et un engagement à créer des sites web beaux et fonctionnels. Avec 1 an d'expérience dans l'industrie, je me spécialise dans la création d'interfaces réactives et conviviales qui génèrent des résultats.
             </p>
             <p className="text-white/70 mb-8">
-              My journey in web development began with a curiosity about how websites work, and it has evolved into a career that I truly love. I approach each project with enthusiasm and dedication, striving to exceed expectations and deliver solutions that make an impact.
+              Mon parcours dans le développement web a commencé par une curiosité sur le fonctionnement des sites web, et s'est transformé en une carrière que j'aime vraiment. J'aborde chaque projet avec enthousiasme et dévouement, m'efforçant de dépasser les attentes et de fournir des solutions qui font la différence.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -38,44 +39,44 @@ const About = () => {
                   <Dribbble className="w-6 h-6 text-purple" />
                 </div>
                 <h3 className="text-lg font-bold mb-1">Basketball</h3>
-                <p className="text-sm text-white/70 text-center">Passionate player</p>
+                <p className="text-sm text-white/70 text-center">Joueur passionné</p>
               </div>
               <div className="glass-card p-4 flex flex-col items-center">
                 <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
                   <Dumbbell className="w-6 h-6 text-purple" />
                 </div>
                 <h3 className="text-lg font-bold mb-1">Fitness</h3>
-                <p className="text-sm text-white/70 text-center">Weightlifting enthusiast</p>
+                <p className="text-sm text-white/70 text-center">Passionné de musculation</p>
               </div>
               <div className="glass-card p-4 flex flex-col items-center">
                 <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
                   <ShoppingBag className="w-6 h-6 text-purple" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">Reselling</h3>
-                <p className="text-sm text-white/70 text-center">Clothes & shoes</p>
+                <h3 className="text-lg font-bold mb-1">Revente</h3>
+                <p className="text-sm text-white/70 text-center">Vêtements & chaussures</p>
               </div>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">1+</h3>
-                <p className="text-sm text-white/70">Years Experience</p>
+                <p className="text-sm text-white/70">Années d'expérience</p>
               </div>
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">7+</h3>
-                <p className="text-sm text-white/70">Projects Completed</p>
+                <p className="text-sm text-white/70">Projets réalisés</p>
               </div>
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">50+</h3>
-                <p className="text-sm text-white/70">Happy Clients</p>
+                <p className="text-sm text-white/70">Clients satisfaits</p>
               </div>
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">10+</h3>
-                <p className="text-sm text-white/70">Awards Received</p>
+                <p className="text-sm text-white/70">Récompenses reçues</p>
               </div>
             </div>
 
-            <a href="#contact" className="btn">Contact Me</a>
+            <a href="#contact" className="btn">Me contacter</a>
           </div>
         </div>
       </div>

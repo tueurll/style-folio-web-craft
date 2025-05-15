@@ -6,7 +6,7 @@ const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const texts = ["Developer.", "Designer.", "Freelancer."];
+  const texts = ["Développeur.", "Designer.", "Freelance."];
   const typingSpeed = 100;
   const deleteSpeed = 50;
   const pauseTime = 1500;
@@ -52,18 +52,18 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center md:justify-between">
         <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-in">
-          <h2 className="text-lg md:text-xl font-medium text-purple mb-4">Welcome to my Portfolio</h2>
+          <h2 className="text-lg md:text-xl font-medium text-purple mb-4">Bienvenue sur mon Portfolio</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Hi, I'm a <br />
+            Bonjour, je suis un <br />
             <span className="text-purple">{typedText}</span>
             <span className="typing-cursor"></span>
           </h1>
           <p className="text-white/70 text-lg md:text-xl max-w-lg mb-8">
-            I create stunning digital experiences that make an impact. Let's build something amazing together.
+            Je crée des expériences digitales impressionnantes qui font la différence. Travaillons ensemble pour créer quelque chose d'extraordinaire.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="#projects" className="btn">View My Work</a>
-            <a href="#contact" className="btn bg-transparent border border-purple hover:bg-purple/10">Contact Me</a>
+            <a href="#projects" className="btn">Voir mes travaux</a>
+            <a href="#contact" className="btn bg-transparent border border-purple hover:bg-purple/10">Me contacter</a>
           </div>
         </div>
         
@@ -73,12 +73,12 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/5"></div>
               <img 
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=1470" 
-                alt="Profile" 
+                alt="Profil" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 glass-card p-4 animate-slide-in">
-              <p className="text-sm font-medium">5+ Years Experience</p>
+              <p className="text-sm font-medium">5+ ans d'expérience</p>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ const Hero = () => {
         href="#about" 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70 hover:text-white transition-colors"
       >
-        <span className="text-sm mb-2">Scroll Down</span>
+        <span className="text-sm mb-2">Défiler vers le bas</span>
         <ChevronDown className="animate-bounce" />
       </a>
     </section>

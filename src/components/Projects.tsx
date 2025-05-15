@@ -1,73 +1,74 @@
+
 import React, { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Plateforme E-Commerce",
     category: "web",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1415",
-    description: "A fully responsive e-commerce platform with payment integration",
+    description: "Une plateforme e-commerce entièrement responsive avec intégration de paiement",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "#",
     demo: "#"
   },
   {
     id: 2,
-    title: "Portfolio Website",
+    title: "Site Portfolio",
     category: "web",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1472",
-    description: "Modern portfolio website with animations and responsive design",
+    description: "Site portfolio moderne avec animations et design responsive",
     tags: ["HTML", "CSS", "JavaScript"],
     github: "#",
     demo: "#"
   },
   {
     id: 3,
-    title: "Task Management App",
+    title: "Application de Gestion de Tâches",
     category: "app",
     image: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?auto=format&fit=crop&q=80&w=1496",
-    description: "A feature-rich task management application with user authentication",
+    description: "Une application de gestion de tâches riche en fonctionnalités avec authentification",
     tags: ["React", "Firebase", "Tailwind CSS"],
     github: "#",
     demo: "#"
   },
   {
     id: 4,
-    title: "Restaurant Website",
+    title: "Site de Restaurant",
     category: "design",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1470",
-    description: "Elegant restaurant website with online reservation system",
+    description: "Site élégant pour un restaurant avec système de réservation en ligne",
     tags: ["Figma", "Adobe XD"],
     github: "#",
     demo: "#"
   },
   {
     id: 5,
-    title: "Weather Application",
+    title: "Application Météo",
     category: "app",
     image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1470",
-    description: "Real-time weather application with location-based forecasts",
+    description: "Application météo en temps réel avec prévisions basées sur la localisation",
     tags: ["JavaScript", "APIs", "CSS"],
     github: "#",
     demo: "#"
   },
   {
     id: 6,
-    title: "Corporate Branding",
+    title: "Identité Visuelle d'Entreprise",
     category: "design",
     image: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?auto=format&fit=crop&q=80&w=1471",
-    description: "Complete branding package for a technology startup",
+    description: "Pack complet d'identité visuelle pour une startup technologique",
     tags: ["Photoshop", "Illustrator"],
     github: null,
     demo: "#"
   },
   {
     id: 7,
-    title: "Fitness Tracker",
+    title: "Suivi de Fitness",
     category: "app",
     image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1470",
-    description: "Track your fitness progress with this customizable app",
+    description: "Suivez vos progrès fitness avec cette application personnalisable",
     tags: ["React Native", "Firebase", "Health API"],
     github: "#",
     demo: "#"
@@ -87,9 +88,9 @@ const Projects = () => {
       
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="section-title">My Recent Projects</h2>
+          <h2 className="section-title">Mes Projets Récents</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Take a look at some of my recent work. Each project represents a unique challenge and solution.
+            Découvrez certains de mes travaux récents. Chaque projet représente un défi et une solution unique.
           </p>
         </div>
 
@@ -99,7 +100,7 @@ const Projects = () => {
               className={`px-5 py-2 rounded-full transition-colors ${filter === 'all' ? 'bg-purple text-white' : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
               onClick={() => setFilter('all')}
             >
-              All
+              Tous
             </button>
             <button 
               className={`px-5 py-2 rounded-full transition-colors ${filter === 'web' ? 'bg-purple text-white' : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
@@ -163,7 +164,7 @@ const Projects = () => {
         
         <div className="text-center mt-12">
           <a href="#" className="btn bg-transparent border border-purple hover:bg-purple/10">
-            View All Projects
+            Voir tous les projets
           </a>
         </div>
       </div>
