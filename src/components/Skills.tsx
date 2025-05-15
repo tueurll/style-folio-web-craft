@@ -2,15 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Code, Palette, FileCode, BarChart3, Coffee } from "lucide-react";
 
-const skills = [
-  { name: "HTML & CSS", percentage: 90 },
-  { name: "JavaScript", percentage: 80 },
-  { name: "PHP", percentage: 75 },
-  { name: "Java", percentage: 85 },
-  { name: "R", percentage: 85 },
-  { name: "TypeScript", percentage: 65 },
-];
-
 const services = [
   {
     icon: <Code className="w-10 h-10 text-purple" />,
@@ -35,29 +26,6 @@ const services = [
 ];
 
 const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const skillsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <section id="skills" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-dark to-dark/95 -z-10"></div>
@@ -71,28 +39,6 @@ const Skills = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          <div ref={skillsRef}>
-            <h3 className="text-2xl font-bold mb-8">Technical Skills</h3>
-            <div className="space-y-6">
-              {skills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-purple">{skill.percentage}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div 
-                      className="skill-progress"
-                      style={{ 
-                        width: isVisible ? `${skill.percentage}%` : "0%" 
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           <div>
             <h3 className="text-2xl font-bold mb-8">Education & Experience</h3>
             <div className="space-y-6">
