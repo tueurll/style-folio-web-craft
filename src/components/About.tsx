@@ -57,7 +57,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-2 gap-6 mb-8">
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">1+</h3>
                 <p className="text-sm text-white/70">Années d'expérience</p>
@@ -65,14 +65,6 @@ const About = () => {
               <div className="glass-card p-4 text-center">
                 <h3 className="text-purple text-3xl font-bold mb-1">7+</h3>
                 <p className="text-sm text-white/70">Projets réalisés</p>
-              </div>
-              <div className="glass-card p-4 text-center">
-                <h3 className="text-purple text-3xl font-bold mb-1">50+</h3>
-                <p className="text-sm text-white/70">Clients satisfaits</p>
-              </div>
-              <div className="glass-card p-4 text-center">
-                <h3 className="text-purple text-3xl font-bold mb-1">10+</h3>
-                <p className="text-sm text-white/70">Récompenses reçues</p>
               </div>
             </div>
 
