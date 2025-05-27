@@ -50,36 +50,20 @@ const Hero = () => {
         }}></div>
       </div>
       
-      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center md:justify-between">
-        <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-in">
+      <div className="container mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center">
+        <div className="w-full animate-fade-in">
           <h2 className="text-lg md:text-xl font-medium text-purple mb-4">Bienvenue sur mon Portfolio</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Bonjour, je suis un <br />
             <span className="text-purple">{typedText}</span>
             <span className="typing-cursor"></span>
           </h1>
-          <p className="text-white/70 text-lg md:text-xl max-w-lg mb-8">
+          <p className="text-white/70 text-lg md:text-xl max-w-lg mx-auto mb-8">
             Je crée des expériences digitales impressionnantes qui font la différence. Travaillons ensemble pour créer quelque chose d'extraordinaire.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center">
             <a href="#projects" className="btn">Voir mes travaux</a>
             <a href="#contact" className="btn bg-transparent border border-purple hover:bg-purple/10">Me contacter</a>
-          </div>
-        </div>
-        
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div className="relative">
-            <div className="glass-card w-64 h-64 md:w-80 md:h-80 flex items-center justify-center overflow-hidden animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/5"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=1470" 
-                alt="Profil" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 glass-card p-4 animate-slide-in">
-              <p className="text-sm font-medium">5+ ans d'expérience</p>
-            </div>
           </div>
         </div>
       </div>
