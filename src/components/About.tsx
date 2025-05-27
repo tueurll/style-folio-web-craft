@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Chess, Dumbbell, ShoppingBag, Globe } from "lucide-react";
+import { Crown, Dumbbell, ShoppingBag, Globe } from "lucide-react";
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <div className="glass-card p-4 flex flex-col items-center">
                 <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
-                  <Chess className="w-6 h-6 text-purple" />
+                  <Crown className="w-6 h-6 text-purple" />
                 </div>
                 <h3 className="text-lg font-bold mb-1">Échecs</h3>
                 <p className="text-sm text-white/70 text-center">Joueur passionné</p>
