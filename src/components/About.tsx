@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Dribbble, Dumbbell, ShoppingBag } from "lucide-react";
+import { Chess, Dumbbell, ShoppingBag, Globe } from "lucide-react";
 
 const About = () => {
   return (
@@ -16,12 +16,12 @@ const About = () => {
               Mon parcours dans le développement web a commencé par une curiosité sur le fonctionnement des sites web, et s'est transformé en une carrière que j'aime vraiment. J'aborde chaque projet avec enthousiasme et dévouement, m'efforçant de dépasser les attentes et de fournir des solutions qui font la différence.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <div className="glass-card p-4 flex flex-col items-center">
                 <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
-                  <Dribbble className="w-6 h-6 text-purple" />
+                  <Chess className="w-6 h-6 text-purple" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">Basketball</h3>
+                <h3 className="text-lg font-bold mb-1">Échecs</h3>
                 <p className="text-sm text-white/70 text-center">Joueur passionné</p>
               </div>
               <div className="glass-card p-4 flex flex-col items-center">
@@ -38,6 +38,35 @@ const About = () => {
                 <h3 className="text-lg font-bold mb-1">Revente</h3>
                 <p className="text-sm text-white/70 text-center">Vêtements & chaussures</p>
               </div>
+              <div className="glass-card p-4 flex flex-col items-center">
+                <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
+                  <Globe className="w-6 h-6 text-purple" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">Langues</h3>
+                <p className="text-sm text-white/70 text-center">Polyglotte</p>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-4">Compétences linguistiques</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="glass-card p-3 text-center">
+                  <h4 className="font-bold text-purple">Arabe</h4>
+                  <p className="text-sm text-white/70">Courant</p>
+                </div>
+                <div className="glass-card p-3 text-center">
+                  <h4 className="font-bold text-purple">Français</h4>
+                  <p className="text-sm text-white/70">Courant</p>
+                </div>
+                <div className="glass-card p-3 text-center">
+                  <h4 className="font-bold text-purple">Anglais</h4>
+                  <p className="text-sm text-white/70">B2-C1</p>
+                </div>
+                <div className="glass-card p-3 text-center">
+                  <h4 className="font-bold text-purple">Espagnol</h4>
+                  <p className="text-sm text-white/70">Bases</p>
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mb-8 max-w-md mx-auto">
@@ -46,7 +75,7 @@ const About = () => {
                 <p className="text-sm text-white/70">Années d'expérience</p>
               </div>
               <div className="glass-card p-4 text-center">
-                <h3 className="text-purple text-3xl font-bold mb-1">7+</h3>
+                <h3 className="text-purple text-3xl font-bold mb-1">9+</h3>
                 <p className="text-sm text-white/70">Projets réalisés</p>
               </div>
             </div>
