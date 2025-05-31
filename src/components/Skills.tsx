@@ -48,7 +48,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-12 mb-20">
           <div>
             <h3 className="text-2xl font-bold mb-8">Éducation & Expérience</h3>
             <div className="space-y-6">
@@ -90,27 +90,6 @@ const Skills = () => {
                   <span className="text-purple text-sm">2023 - Présent</span>
                 </div>
                 <p className="text-white/70">Indépendant</p>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Projets Réalisés</h3>
-            <div className="space-y-6">
-              <div className="glass-card p-6">
-                <div className="flex items-center mb-3">
-                  <Video className="w-6 h-6 text-purple mr-3" />
-                  <h4 className="font-bold">Projet de Montage Vidéo</h4>
-                </div>
-                <p className="text-white/70">Création et édition de contenu vidéo avec des outils professionnels de montage</p>
-              </div>
-              
-              <div className="glass-card p-6">
-                <div className="flex items-center mb-3">
-                  <Calendar className="w-6 h-6 text-purple mr-3" />
-                  <h4 className="font-bold">Application d'Organisation d'Événements</h4>
-                </div>
-                <p className="text-white/70">Développement d'une application complète pour la gestion et l'organisation d'événements</p>
               </div>
             </div>
           </div>

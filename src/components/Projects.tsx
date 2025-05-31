@@ -42,6 +42,22 @@ const projects = [
     image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1470",
     description: "Installation d'une machine virtuelle avec Apache, PostgreSQL et création d'un guide d'installation en anglais",
     tags: ["VM", "Apache", "PostgreSQL", "Documentation"]
+  },
+  {
+    id: 6,
+    title: "Projet de Montage Vidéo",
+    category: "media",
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1470",
+    description: "Création et édition de contenu vidéo avec des outils professionnels de montage",
+    tags: ["Montage", "Vidéo", "Post-production", "Créativité"]
+  },
+  {
+    id: 7,
+    title: "Application d'Organisation d'Événements",
+    category: "app",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1469",
+    description: "Développement d'une application complète pour la gestion et l'organisation d'événements",
+    tags: ["React", "Gestion", "Événements", "Interface utilisateur"]
   }
 ];
 
@@ -58,7 +74,7 @@ const Projects = () => {
       
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="section-title">Mes Projets Récents</h2>
+          <h2 className="section-title">Mes Projets</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
             Découvrez certains de mes travaux récents. Chaque projet représente un défi et une solution unique.
           </p>
@@ -95,6 +111,12 @@ const Projects = () => {
               onClick={() => setFilter('system')}
             >
               Système
+            </button>
+            <button 
+              className={`px-5 py-2 rounded-full transition-colors ${filter === 'media' ? 'bg-purple text-white' : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
+              onClick={() => setFilter('media')}
+            >
+              Média
             </button>
           </div>
         </div>
