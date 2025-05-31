@@ -42,7 +42,7 @@ const Skills = () => {
       
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="section-title">Mes Compétences & Services</h2>
+          <h2 className="section-title">Mes Compétences et Expériences</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
             Je propose une gamme de services pour vous aider à atteindre vos objectifs numériques. Voici ce que je peux faire pour vous.
           </p>
@@ -117,7 +117,7 @@ const Skills = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-8 text-center">Services Proposés</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">Mes Compétences</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="glass-card p-6 text-center transition-transform hover:scale-105 duration-300">

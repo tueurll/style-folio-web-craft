@@ -9,9 +9,7 @@ const projects = [
     category: "web",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1415",
     description: "Refonte complète du site web d'une entreprise pour des élèves de 3ème",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    github: "#",
-    demo: "#"
+    tags: ["HTML", "CSS", "JavaScript", "Responsive Design"]
   },
   {
     id: 2,
@@ -19,9 +17,7 @@ const projects = [
     category: "database",
     image: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?auto=format&fit=crop&q=80&w=1496",
     description: "Création et administration d'une base de données pour une entreprise de bowling",
-    tags: ["SQL", "PostgreSQL", "Administration BD", "Gestion de données"],
-    github: "#",
-    demo: "#"
+    tags: ["SQL", "PostgreSQL", "Administration BD", "Gestion de données"]
   },
   {
     id: 3,
@@ -29,9 +25,7 @@ const projects = [
     category: "app",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1472",
     description: "Algorithme en Java permettant d'identifier le sujet principal d'un article aléatoire",
-    tags: ["Java", "Algorithme", "NLP", "Analyse de texte"],
-    github: "#",
-    demo: "#"
+    tags: ["Java", "Algorithme", "NLP", "Analyse de texte"]
   },
   {
     id: 4,
@@ -39,9 +33,7 @@ const projects = [
     category: "system",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1470",
     description: "Installation complète d'un poste de développement sous Debian 12",
-    tags: ["Debian", "Linux", "Configuration", "Développement"],
-    github: "#",
-    demo: "#"
+    tags: ["Debian", "Linux", "Configuration", "Développement"]
   },
   {
     id: 5,
@@ -49,9 +41,7 @@ const projects = [
     category: "system",
     image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1470",
     description: "Installation d'une machine virtuelle avec Apache, PostgreSQL et création d'un guide d'installation en anglais",
-    tags: ["VM", "Apache", "PostgreSQL", "Documentation"],
-    github: "#",
-    demo: "#"
+    tags: ["VM", "Apache", "PostgreSQL", "Documentation"]
   }
 ];
 
@@ -118,22 +108,6 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 w-full">
-                    <div className="flex justify-end space-x-3">
-                      {project.github && (
-                        <a href={project.github} className="w-10 h-10 rounded-full bg-dark/50 text-white flex items-center justify-center backdrop-blur-sm hover:bg-purple transition-colors">
-                          <Github size={18} />
-                        </a>
-                      )}
-                      <a href={project.demo} className="w-10 h-10 rounded-full bg-dark/50 text-white flex items-center justify-center backdrop-blur-sm hover:bg-purple transition-colors">
-                        {project.category === 'database' ? <Database size={18} /> : 
-                         project.category === 'system' ? <Server size={18} /> : 
-                         project.category === 'app' ? <Code size={18} /> : <ExternalLink size={18} />}
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
@@ -148,12 +122,6 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <a href="#" className="btn bg-transparent border border-purple hover:bg-purple/10">
-            Voir tous les projets
-          </a>
         </div>
       </div>
     </section>
