@@ -1,39 +1,20 @@
 
 import React, { useState } from 'react';
-import { Terminal } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const BasketballGame = () => {
-  const [isHacking, setIsHacking] = useState(false);
-  const [hackLines, setHackLines] = useState<string[]>([]);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
 
-  const hackTexts = [
-    "Initializing hack sequence...",
-    "Bypassing firewall...",
-    "Accessing mainframe...",
-    "Downloading data...",
-    "Encryption cracked!",
-    "System compromised!",
-    "Welcome to the matrix 😎"
-  ];
-
-  const triggerHack = () => {
-    if (isHacking) return;
+  const triggerAnimation = () => {
+    if (isAnimating) return;
     
-    setIsHacking(true);
-    setHackLines([]);
+    setIsAnimating(true);
+    setClickCount(prev => prev + 1);
     
-    hackTexts.forEach((text, index) => {
-      setTimeout(() => {
-        setHackLines(prev => [...prev, text]);
-        
-        if (index === hackTexts.length - 1) {
-          setTimeout(() => {
-            setIsHacking(false);
-            setHackLines([]);
-          }, 2000);
-        }
-      }, index * 500);
-    });
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 1500);
   };
 
   return (
@@ -44,49 +25,48 @@ const BasketballGame = () => {
         <div className="text-center mb-16">
           <h2 className="section-title">Easter Egg</h2>
           <p className="text-white/70 max-w-2xl mx-auto">
-            Trouvez l'easter egg caché... 🕵️‍♂️
+            Il y a quelque chose de caché ici... 🤔
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center relative">
           <div className="glass-card p-8 relative overflow-hidden">
-            {/* Easter Egg Terminal Icon */}
+            {/* Bouton caché */}
             <div className="relative inline-block">
-              <Terminal 
-                className={`w-16 h-16 text-purple cursor-pointer transition-all duration-300 hover:scale-110 hover:text-green-400 ${
-                  isHacking ? 'animate-pulse text-green-400' : ''
+              <div
+                className={`w-4 h-4 bg-transparent border border-white/10 rounded cursor-pointer transition-all duration-300 hover:border-purple/50 hover:scale-110 ${
+                  isAnimating ? 'animate-pulse' : ''
                 }`}
-                onClick={triggerHack}
+                onClick={triggerAnimation}
+                title="🤫"
               />
               
-              {/* Hack Animation Overlay */}
-              {isHacking && (
-                <div className="absolute inset-0 -top-20 left-1/2 transform -translate-x-1/2 w-96 h-64 bg-black/90 border border-green-400 rounded-lg p-4 z-10">
-                  <div className="text-green-400 font-mono text-sm">
-                    <div className="flex items-center mb-2">
-                      <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                      <span className="text-white text-xs">Terminal</span>
-                    </div>
-                    <div className="border-t border-green-400 pt-2">
-                      {hackLines.map((line, index) => (
-                        <div key={index} className="mb-1 animate-fade-in">
-                          <span className="text-green-600">$ </span>
-                          {line}
-                          {index === hackLines.length - 1 && (
-                            <span className="inline-block w-2 h-4 bg-green-400 ml-1 animate-pulse"></span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+              {/* Animation de particules */}
+              {isAnimating && (
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(8)].map((_, i) => (
+                    <Sparkles
+                      key={i}
+                      className={`absolute w-4 h-4 text-purple animate-ping`}
+                      style={{
+                        left: `${Math.random() * 100}px`,
+                        top: `${Math.random() * 100}px`,
+                        animationDelay: `${i * 0.1}s`,
+                        animationDuration: '1s'
+                      }}
+                    />
+                  ))}
                 </div>
               )}
             </div>
 
             <div className="mt-8 text-white/60">
-              <p>Cliquez sur l'icône pour découvrir quelque chose... 👨‍💻</p>
+              <p>Cherchez bien... 👀</p>
+              {clickCount > 0 && (
+                <p className="text-purple text-sm mt-2 animate-fade-in">
+                  ✨ Découvert {clickCount} fois !
+                </p>
+              )}
             </div>
           </div>
         </div>
