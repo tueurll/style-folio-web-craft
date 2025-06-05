@@ -1,13 +1,67 @@
 
-import React from "react";
-import { Crown, Dumbbell, ShoppingBag, Globe } from "lucide-react";
+import React, { useState } from "react";
+import { Crown, Dumbbell, ShoppingBag, Globe, Sparkles } from "lucide-react";
 
 const About = () => {
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+
+  const triggerAnimation = () => {
+    if (isAnimating) return;
+    
+    setIsAnimating(true);
+    setClickCount(prev => prev + 1);
+    
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 1500);
+  };
+
   return (
     <section id="about" className="py-20 bg-dark relative">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center">
-          <h2 className="section-title">À propos de moi</h2>
+          <div className="flex items-center gap-4 mb-6">
+            <h2 className="section-title">À propos de moi</h2>
+            
+            {/* Bouton easter egg */}
+            <div className="relative inline-block">
+              <div
+                className={`w-4 h-4 bg-transparent border border-white/10 rounded cursor-pointer transition-all duration-300 hover:border-purple/50 hover:scale-110 ${
+                  isAnimating ? 'animate-pulse' : ''
+                }`}
+                onClick={triggerAnimation}
+                title="🤫"
+              />
+              
+              {/* Animation de particules */}
+              {isAnimating && (
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(8)].map((_, i) => (
+                    <Sparkles
+                      key={i}
+                      className={`absolute w-4 h-4 text-purple animate-ping`}
+                      style={{
+                        left: `${Math.random() * 100}px`,
+                        top: `${Math.random() * 100}px`,
+                        animationDelay: `${i * 0.1}s`,
+                        animationDuration: '1s'
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
+              
+              {clickCount > 0 && (
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                  <p className="text-purple text-xs animate-fade-in whitespace-nowrap">
+                    ✨ {clickCount} fois !
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
           <div className="max-w-4xl">
             <p className="text-white/70 mb-6">
               Je suis un développeur web passionné avec un sens aigu du design et un engagement à créer des sites web beaux et fonctionnels. Avec 1 an d'expérience dans l'industrie, je me spécialise dans la création d'interfaces réactives et conviviales qui génèrent des résultats.

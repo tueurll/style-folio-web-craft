@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,24 +11,6 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-2xl font-bold text-white font-heading">
               Portfolio<span className="text-purple">.</span>
-            </a>
-            <p className="text-white/70 mt-3 max-w-md">
-              Créer des expériences digitales magnifiques qui font la différence.
-            </p>
-          </div>
-          
-          <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple transition-colors">
-              <Github className="w-5 h-5 text-white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple transition-colors">
-              <Twitter className="w-5 h-5 text-white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple transition-colors">
-              <Linkedin className="w-5 h-5 text-white" />
-            </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple transition-colors">
-              <Instagram className="w-5 h-5 text-white" />
             </a>
           </div>
         </div>
