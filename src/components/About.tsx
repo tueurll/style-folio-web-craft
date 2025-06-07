@@ -64,7 +64,7 @@ const About = () => {
 
           <div className="max-w-4xl">
             <p className="text-white/70 mb-6">
-              Je suis un développeur web passionné avec un sens aigu du design et un engagement à créer des sites web beaux et fonctionnels. Avec 1 an d'expérience dans l'industrie, je me spécialise dans la création d'interfaces réactives et conviviales qui génèrent des résultats.
+              Je suis un développeur web passionné avec un sens aigu du design et un engagement à créer des sites web beaux et fonctionnels. Avec 1 an d'expérience, je me spécialise dans la création d'interfaces réactives et conviviales qui génèrent des résultats.
             </p>
             <p className="text-white/70 mb-8">
               Mon parcours dans le développement web a commencé par une curiosité sur le fonctionnement des sites web, et s'est transformé en une carrière que j'aime vraiment. J'aborde chaque projet avec enthousiasme et dévouement, m'efforçant de dépasser les attentes et de fournir des solutions qui font la différence.
