@@ -63,6 +63,11 @@ const About = () => {
           </div>
 
           <div className="max-w-4xl">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-purple mb-2">Rayan NYABI</h3>
+              <p className="text-white/70 text-lg">18 ans</p>
+            </div>
+            
             <p className="text-white/70 mb-6">
               Je suis un développeur web passionné avec un sens aigu du design et un engagement à créer des sites web beaux et fonctionnels. Avec 1 an d'expérience, je me spécialise dans la création d'interfaces réactives et conviviales qui génèrent des résultats.
             </p>
