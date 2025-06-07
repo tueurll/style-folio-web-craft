@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Code, Palette, Coffee, BarChart3, Video, Calendar } from "lucide-react";
 
@@ -43,9 +42,6 @@ const Skills = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <h2 className="section-title">Mes Compétences et Expériences</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Je propose une gamme de services pour vous aider à atteindre vos objectifs numériques. Voici ce que je peux faire pour vous.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-12 mb-20">
