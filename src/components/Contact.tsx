@@ -1,47 +1,8 @@
 
-import React, { useState } from "react";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import React from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message envoyé !",
-        description: "Merci de m'avoir contacté. Je vous répondrai très bientôt.",
-      });
-      
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-dark to-dark/95 -z-10"></div>
@@ -54,13 +15,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-1">
-            <div className="glass-card p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6">Informations de Contact</h3>
-              <p className="text-white/70 mb-8">
-                Remplissez le formulaire et je vous répondrai dès que possible.
-              </p>
+        <div className="flex justify-center">
+          <div className="max-w-md w-full">
+            <div className="glass-card p-8">
+              <h3 className="text-2xl font-bold mb-8 text-center">Informations de Contact</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -93,79 +51,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-2">
-            <div className="glass-card p-8">
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">Nom</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white"
-                      placeholder="Votre nom"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white"
-                      placeholder="votre.email@exemple.com"
-                    />
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Sujet</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white"
-                    placeholder="Comment puis-je vous aider ?"
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full bg-white/5 border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple/50 text-white resize-none"
-                    placeholder="Votre message ici..."
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn w-full flex justify-center items-center gap-2"
-                >
-                  {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
             </div>
           </div>
         </div>
