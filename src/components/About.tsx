@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { Crown, Dumbbell, ShoppingBag, Globe, Sparkles } from "lucide-react";
+import { Dumbbell, ShoppingBag, Globe, Sparkles } from "lucide-react";
 
 const About = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -75,14 +74,7 @@ const About = () => {
               Mon parcours dans le développement web a commencé par une curiosité sur le fonctionnement des sites web, et s'est transformé en une carrière que j'aime vraiment. J'aborde chaque projet avec enthousiasme et dévouement, m'efforçant de dépasser les attentes et de fournir des solutions qui font la différence.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
-              <div className="glass-card p-4 flex flex-col items-center">
-                <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
-                  <Crown className="w-6 h-6 text-purple" />
-                </div>
-                <h3 className="text-lg font-bold mb-1">Échecs</h3>
-                <p className="text-sm text-white/70 text-center">Joueur passionné</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               <div className="glass-card p-4 flex flex-col items-center">
                 <div className="w-12 h-12 bg-purple/10 rounded-full flex items-center justify-center mb-3">
                   <Dumbbell className="w-6 h-6 text-purple" />
